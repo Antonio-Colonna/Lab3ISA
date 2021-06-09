@@ -1,0 +1,195 @@
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV
+Version: O-2018.06-SP4
+Date   : Mon Jun  7 13:01:38 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: EX_MEM/Q_reg[1]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: ProgramCnt/pc_out_reg[25]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_MEM/Q_reg[1]/CK (DFFR_X1)                            0.00       0.00 r
+  EX_MEM/Q_reg[1]/Q (DFFR_X1)                             0.11       0.11 r
+  EX_MEM/Q[1] (reg_N139)                                  0.00       0.11 r
+  fwd_unit/rd_ex_mem[1] (forward_unit)                    0.00       0.11 r
+  fwd_unit/U48/ZN (XNOR2_X1)                              0.06       0.18 r
+  fwd_unit/U32/ZN (NAND3_X1)                              0.03       0.21 f
+  fwd_unit/U43/ZN (NOR4_X1)                               0.09       0.30 r
+  fwd_unit/for_a[1] (forward_unit)                        0.00       0.30 r
+  ALU_mux1/sel[1] (mux4_0)                                0.00       0.30 r
+  ALU_mux1/U147/ZN (INV_X1)                               0.03       0.33 f
+  ALU_mux1/U7/ZN (AND2_X1)                                0.04       0.38 f
+  ALU_mux1/U146/ZN (AOI222_X1)                            0.10       0.47 r
+  ALU_mux1/U134/ZN (INV_X1)                               0.03       0.50 f
+  ALU_mux1/d[63] (mux4_0)                                 0.00       0.50 f
+  SFU/RD1[63] (spec_function)                             0.00       0.50 f
+  SFU/U3/Z (BUF_X1)                                       0.05       0.55 f
+  SFU/U67/Z (XOR2_X1)                                     0.08       0.63 f
+  SFU/funct_out[0] (spec_function)                        0.00       0.63 f
+  SFU_MUX/b[0] (mux2_N64_3)                               0.00       0.63 f
+  SFU_MUX/U152/ZN (AOI22_X1)                              0.05       0.68 r
+  SFU_MUX/U151/ZN (INV_X1)                                0.04       0.72 f
+  SFU_MUX/c[0] (mux2_N64_3)                               0.00       0.72 f
+  ALU_unit/A[0] (ALU)                                     0.00       0.72 f
+  ALU_unit/sub_16/A[0] (ALU_DW01_sub_0)                   0.00       0.72 f
+  ALU_unit/sub_16/U2/ZN (NAND2_X1)                        0.04       0.75 r
+  ALU_unit/sub_16/U140/ZN (NAND3_X1)                      0.04       0.79 f
+  ALU_unit/sub_16/U2_1/CO (FA_X1)                         0.10       0.89 f
+  ALU_unit/sub_16/U73/ZN (NAND2_X1)                       0.03       0.92 r
+  ALU_unit/sub_16/U74/ZN (NAND3_X1)                       0.04       0.96 f
+  ALU_unit/sub_16/U2_3/CO (FA_X1)                         0.09       1.05 f
+  ALU_unit/sub_16/U2_4/CO (FA_X1)                         0.10       1.14 f
+  ALU_unit/sub_16/U208/ZN (NAND2_X1)                      0.03       1.18 r
+  ALU_unit/sub_16/U210/ZN (NAND3_X1)                      0.04       1.21 f
+  ALU_unit/sub_16/U2_6/CO (FA_X1)                         0.09       1.30 f
+  ALU_unit/sub_16/U2_7/CO (FA_X1)                         0.09       1.39 f
+  ALU_unit/sub_16/U2_8/CO (FA_X1)                         0.10       1.49 f
+  ALU_unit/sub_16/U128/ZN (NAND2_X1)                      0.03       1.52 r
+  ALU_unit/sub_16/U130/ZN (NAND3_X1)                      0.04       1.57 f
+  ALU_unit/sub_16/U202/ZN (NAND2_X1)                      0.03       1.60 r
+  ALU_unit/sub_16/U204/ZN (NAND3_X1)                      0.04       1.64 f
+  ALU_unit/sub_16/U2_11/CO (FA_X1)                        0.10       1.73 f
+  ALU_unit/sub_16/U327/ZN (NAND2_X1)                      0.04       1.77 r
+  ALU_unit/sub_16/U212/ZN (NAND3_X1)                      0.04       1.81 f
+  ALU_unit/sub_16/U215/ZN (NAND2_X1)                      0.04       1.85 r
+  ALU_unit/sub_16/U218/ZN (NAND3_X1)                      0.04       1.88 f
+  ALU_unit/sub_16/U110/ZN (NAND2_X1)                      0.04       1.92 r
+  ALU_unit/sub_16/U112/ZN (NAND3_X1)                      0.04       1.96 f
+  ALU_unit/sub_16/U265/ZN (NAND2_X1)                      0.03       1.99 r
+  ALU_unit/sub_16/U9/ZN (NAND3_X1)                        0.04       2.03 f
+  ALU_unit/sub_16/U85/ZN (NAND2_X1)                       0.03       2.06 r
+  ALU_unit/sub_16/U88/ZN (NAND3_X1)                       0.03       2.10 f
+  ALU_unit/sub_16/U2_17/CO (FA_X1)                        0.09       2.19 f
+  ALU_unit/sub_16/U2_18/CO (FA_X1)                        0.09       2.28 f
+  ALU_unit/sub_16/U2_19/CO (FA_X1)                        0.10       2.37 f
+  ALU_unit/sub_16/U282/ZN (NAND2_X1)                      0.04       2.41 r
+  ALU_unit/sub_16/U25/ZN (NAND3_X1)                       0.04       2.45 f
+  ALU_unit/sub_16/U234/ZN (NAND2_X1)                      0.04       2.49 r
+  ALU_unit/sub_16/U137/ZN (NAND3_X1)                      0.04       2.53 f
+  ALU_unit/sub_16/U156/ZN (NAND2_X1)                      0.04       2.57 r
+  ALU_unit/sub_16/U159/ZN (NAND3_X1)                      0.04       2.61 f
+  ALU_unit/sub_16/U190/ZN (NAND2_X1)                      0.03       2.63 r
+  ALU_unit/sub_16/U192/ZN (NAND3_X1)                      0.04       2.67 f
+  ALU_unit/sub_16/U2_24/CO (FA_X1)                        0.09       2.76 f
+  ALU_unit/sub_16/U2_25/CO (FA_X1)                        0.10       2.85 f
+  ALU_unit/sub_16/U315/ZN (NAND2_X1)                      0.04       2.89 r
+  ALU_unit/sub_16/U317/ZN (NAND3_X1)                      0.04       2.94 f
+  ALU_unit/sub_16/U321/ZN (NAND2_X1)                      0.04       2.97 r
+  ALU_unit/sub_16/U7/ZN (NAND3_X1)                        0.04       3.01 f
+  ALU_unit/sub_16/U195/ZN (NAND2_X1)                      0.04       3.05 r
+  ALU_unit/sub_16/U198/ZN (NAND3_X1)                      0.04       3.09 f
+  ALU_unit/sub_16/U80/ZN (NAND2_X1)                       0.03       3.11 r
+  ALU_unit/sub_16/U82/ZN (NAND3_X1)                       0.04       3.15 f
+  ALU_unit/sub_16/U2_30/CO (FA_X1)                        0.10       3.24 f
+  ALU_unit/sub_16/U276/ZN (NAND2_X1)                      0.03       3.28 r
+  ALU_unit/sub_16/U278/ZN (NAND3_X1)                      0.04       3.32 f
+  ALU_unit/sub_16/U2_32/CO (FA_X1)                        0.10       3.41 f
+  ALU_unit/sub_16/U163/ZN (NAND2_X1)                      0.03       3.44 r
+  ALU_unit/sub_16/U165/ZN (NAND3_X1)                      0.04       3.49 f
+  ALU_unit/sub_16/U177/ZN (NAND2_X1)                      0.04       3.53 r
+  ALU_unit/sub_16/U38/ZN (NAND3_X1)                       0.04       3.57 f
+  ALU_unit/sub_16/U103/ZN (NAND2_X1)                      0.04       3.60 r
+  ALU_unit/sub_16/U106/ZN (NAND3_X1)                      0.04       3.64 f
+  ALU_unit/sub_16/U259/ZN (NAND2_X1)                      0.03       3.67 r
+  ALU_unit/sub_16/U24/ZN (NAND3_X1)                       0.04       3.71 f
+  ALU_unit/sub_16/U149/ZN (NAND2_X1)                      0.03       3.74 r
+  ALU_unit/sub_16/U152/ZN (NAND3_X1)                      0.03       3.78 f
+  ALU_unit/sub_16/U2_38/CO (FA_X1)                        0.10       3.87 f
+  ALU_unit/sub_16/U241/ZN (NAND2_X1)                      0.04       3.91 r
+  ALU_unit/sub_16/U28/ZN (NAND3_X1)                       0.04       3.95 f
+  ALU_unit/sub_16/U183/ZN (NAND2_X1)                      0.04       3.99 r
+  ALU_unit/sub_16/U186/ZN (NAND3_X1)                      0.04       4.03 f
+  ALU_unit/sub_16/U98/ZN (NAND2_X1)                       0.03       4.06 r
+  ALU_unit/sub_16/U26/ZN (NAND3_X1)                       0.04       4.10 f
+  ALU_unit/sub_16/U302/ZN (NAND2_X1)                      0.04       4.13 r
+  ALU_unit/sub_16/U27/ZN (NAND3_X1)                       0.04       4.17 f
+  ALU_unit/sub_16/U308/ZN (NAND2_X1)                      0.04       4.21 r
+  ALU_unit/sub_16/U6/ZN (NAND3_X1)                        0.04       4.24 f
+  ALU_unit/sub_16/U143/ZN (NAND2_X1)                      0.03       4.27 r
+  ALU_unit/sub_16/U146/ZN (NAND3_X1)                      0.03       4.31 f
+  ALU_unit/sub_16/U2_45/CO (FA_X1)                        0.10       4.40 f
+  ALU_unit/sub_16/U92/ZN (NAND2_X1)                       0.03       4.44 r
+  ALU_unit/sub_16/U94/ZN (NAND3_X1)                       0.04       4.48 f
+  ALU_unit/sub_16/U223/ZN (NAND2_X1)                      0.03       4.51 r
+  ALU_unit/sub_16/U225/ZN (NAND3_X1)                      0.04       4.55 f
+  ALU_unit/sub_16/U229/ZN (NAND2_X1)                      0.03       4.59 r
+  ALU_unit/sub_16/U231/ZN (NAND3_X1)                      0.04       4.63 f
+  ALU_unit/sub_16/U2_49/CO (FA_X1)                        0.10       4.72 f
+  ALU_unit/sub_16/U122/ZN (NAND2_X1)                      0.03       4.75 r
+  ALU_unit/sub_16/U124/ZN (NAND3_X1)                      0.04       4.80 f
+  ALU_unit/sub_16/U172/ZN (NAND2_X1)                      0.04       4.84 r
+  ALU_unit/sub_16/U8/ZN (NAND3_X1)                        0.04       4.87 f
+  ALU_unit/sub_16/U115/ZN (NAND2_X1)                      0.04       4.91 r
+  ALU_unit/sub_16/U14/ZN (NAND3_X1)                       0.04       4.95 f
+  ALU_unit/sub_16/U252/ZN (NAND2_X1)                      0.03       4.98 r
+  ALU_unit/sub_16/U255/ZN (NAND3_X1)                      0.03       5.01 f
+  ALU_unit/sub_16/U2_54/CO (FA_X1)                        0.10       5.11 f
+  ALU_unit/sub_16/U247/ZN (NAND2_X1)                      0.03       5.14 r
+  ALU_unit/sub_16/U249/ZN (NAND3_X1)                      0.04       5.18 f
+  ALU_unit/sub_16/U2_56/CO (FA_X1)                        0.10       5.27 f
+  ALU_unit/sub_16/U291/ZN (NAND2_X1)                      0.04       5.31 r
+  ALU_unit/sub_16/U293/ZN (NAND3_X1)                      0.04       5.35 f
+  ALU_unit/sub_16/U296/ZN (NAND2_X1)                      0.04       5.39 r
+  ALU_unit/sub_16/U299/ZN (NAND3_X1)                      0.04       5.43 f
+  ALU_unit/sub_16/U66/ZN (NAND2_X1)                       0.03       5.46 r
+  ALU_unit/sub_16/U68/ZN (NAND3_X1)                       0.04       5.50 f
+  ALU_unit/sub_16/U2_60/CO (FA_X1)                        0.10       5.59 f
+  ALU_unit/sub_16/U271/ZN (NAND2_X1)                      0.04       5.63 r
+  ALU_unit/sub_16/U131/ZN (NAND3_X1)                      0.04       5.67 f
+  ALU_unit/sub_16/U167/ZN (NAND2_X1)                      0.03       5.70 r
+  ALU_unit/sub_16/U13/ZN (AND3_X1)                        0.05       5.75 r
+  ALU_unit/sub_16/U76/ZN (XNOR2_X1)                       0.03       5.78 f
+  ALU_unit/sub_16/DIFF[63] (ALU_DW01_sub_0)               0.00       5.78 f
+  ALU_unit/U443/ZN (AOI22_X1)                             0.05       5.83 r
+  ALU_unit/U444/ZN (OAI211_X1)                            0.05       5.87 f
+  ALU_unit/U11/ZN (NOR2_X1)                               0.05       5.93 r
+  ALU_unit/zero (ALU)                                     0.00       5.93 r
+  U4/ZN (AND2_X2)                                         0.05       5.98 r
+  PC_MUX/sel (mux2_N64_0)                                 0.00       5.98 r
+  PC_MUX/U145/Z (CLKBUF_X1)                               0.05       6.03 r
+  PC_MUX/U99/Z (BUF_X1)                                   0.04       6.07 r
+  PC_MUX/U173/Z (BUF_X2)                                  0.04       6.11 r
+  PC_MUX/U175/ZN (AOI22_X1)                               0.04       6.15 f
+  PC_MUX/U176/ZN (INV_X1)                                 0.03       6.18 r
+  PC_MUX/c[25] (mux2_N64_0)                               0.00       6.18 r
+  ProgramCnt/pc_in[25] (Prog_counter)                     0.00       6.18 r
+  ProgramCnt/U94/ZN (NAND2_X1)                            0.02       6.20 f
+  ProgramCnt/U139/ZN (OAI21_X1)                           0.03       6.23 r
+  ProgramCnt/pc_out_reg[25]/D (DFFR_X1)                   0.01       6.24 r
+  data arrival time                                                  6.24
+
+  clock MY_CLK (rise edge)                                6.35       6.35
+  clock network delay (ideal)                             0.00       6.35
+  clock uncertainty                                      -0.07       6.28
+  ProgramCnt/pc_out_reg[25]/CK (DFFR_X1)                  0.00       6.28 r
+  library setup time                                     -0.04       6.24
+  data required time                                                 6.24
+  --------------------------------------------------------------------------
+  data required time                                                 6.24
+  data arrival time                                                 -6.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
